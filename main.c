@@ -110,75 +110,59 @@ int WINAPI DllMain(HINSTANCE hInst, DWORD fdwReason, PVOID pvReserved){
 //			全ての関数を列挙し終わった場合は、RET_LOOPEND を返す。
 //
 __declspec(dllexport) int GetToolInfo(int Cnt,char *Title,char *Func,long *lParam){
-  int ret = RET_LOOPEND;
+	int ret = RET_LOOPEND;
 
-  switch(Cnt)
-    {
-    case 0:					// 0 番目の呼び出し
-      // **************************************
-      lstrcpy(Title,"Font");		//タイトルの設定
-      lstrcpy(Func,"Font");			//関数名の設定
-      //*lParam = 0;									//関数に渡す数値の設定
+	switch(Cnt)
+	{
+	case 0:					// 0 番目の呼び出し
+		// **************************************
+		lstrcpy(Title,"Font");		//タイトルの設定
+		lstrcpy(Func,"Font");			//関数名の設定
+		//*lParam = 0;									//関数に渡す数値の設定
 
-      ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
-      // **************************************
-      break;
-    case 1:
-      // **************************************
-      lstrcpy(Title,"Comment");		//タイトルの設定
-      lstrcpy(Func,"Comment");			//関数名の設定
-      //*lParam = 0;									//関数に渡す数値の設定
+		ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
+		// **************************************
+		break;
+	case 1:
+		// **************************************
+		lstrcpy(Title,"Comment");		//タイトルの設定
+		lstrcpy(Func,"Comment");			//関数名の設定
+		//*lParam = 0;									//関数に渡す数値の設定
 
-      ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
-      // **************************************
-      break;
-    case 2:
-      // **************************************
-      lstrcpy(Title,"Link");		//タイトルの設定
-      lstrcpy(Func,"Link");			//関数名の設定
-      //*lParam = 0;									//関数に渡す数値の設定
+		ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
+		// **************************************
+		break;
+	case 2:
+		// **************************************
+		lstrcpy(Title,"Link");		//タイトルの設定
+		lstrcpy(Func,"Link");			//関数名の設定
+		//*lParam = 0;									//関数に渡す数値の設定
 
-      ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
-      // **************************************
-      break;
-    case 3:
-      // **************************************
-      lstrcpy(Title,"_obj");		//タイトルの設定
-      lstrcpy(Func,"_obj");			//関数名の設定
-      //*lParam = 0;									//関数に渡す数値の設定
+		ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
+		// **************************************
+		break;
 
-      ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
-      // **************************************
-      break;
-    case 4:
-      // **************************************
-      lstrcpy(Title,"bmp2xpm");		//タイトルの設定
-      lstrcpy(Func,"bmp2xpm");			//関数名の設定
-      //*lParam = 0;									//関数に渡す数値の設定
+	case 3:
+		// **************************************
+		lstrcpy(Title,"Span");		//タイトルの設定
+		lstrcpy(Func,"Span");			//関数名の設定
+		//*lParam = 0;									//関数に渡す数値の設定
 
-      ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
-      // **************************************
-      break;
-    case 5:
-      // **************************************
-      lstrcpy(Title,"DEFINE_VARIABLE");		//タイトルの設定
-      lstrcpy(Func,"DEFINE_VARIABLE");			//関数名の設定
-      //*lParam = 0;									//関数に渡す数値の設定
+		ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
+		// **************************************
+		break;
+	case 4:
+		// **************************************
+		lstrcpy(Title,"Footnote");		//タイトルの設定
+		lstrcpy(Func,"Footnote");			//関数名の設定
+		//*lParam = 0;									//関数に渡す数値の設定
 
-      ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
-      // **************************************
-      break;
-    case 6:
-      // **************************************
-      lstrcpy(Title,"GTK_OBJECT");		//タイトルの設定
-      lstrcpy(Func,"GTK_OBJECT");			//関数名の設定
-      //*lParam = 0;									//関数に渡す数値の設定
+		ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
+		// **************************************
+		break;
 
-      ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
-      // **************************************
-      break;
-    }
-  return ret;
+	}
+	return ret;
 }
 
 //ツール

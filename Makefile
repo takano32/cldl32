@@ -1,10 +1,11 @@
-cldl32	:	main.o cldl32.res Font.o Comment.o Link.o
-	gcc -shared -mwindows -mno-cygwin -o cldl32.dll main.o cldl32.res Font.o Comment.o Link.o -limm32
+OBJ=main.o Font.o Comment.o Link.o Span.o Footnote.o
+cldl32	:	cldl32.res ${OBJ}
+	gcc -shared -mwindows -mno-cygwin -o cldl32.dll ${OBJ} cldl32.res -limm32
 cldl32.res	:	cldl32.rc
 	windres $< -O coff -o $@
 
 install:
-	cp cldl32.dll D:\Tools\clcl
+	cp cldl32.dll /cygdrive/D/Tools/clcl
 
 clean:
 	rm -f *.o *.res *.dll
