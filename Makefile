@@ -7,5 +7,8 @@ cldl32.res	:	cldl32.rc
 install:
 	cp cldl32.dll /cygdrive/D/Tools/clcl
 
+installz:
+	cp cldl32.dll /cygdrive/Z/Tools/clcl
+
 clean:
 	rm -f *.o *.res *.dll
