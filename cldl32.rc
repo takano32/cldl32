@@ -1,0 +1,18 @@
+#include "cldl32.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+INPUTDLG DIALOG DISCARDABLE  0, 0, 196, 24
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OPTION"
+FONT 9, ""
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,196-48,0,48,12
+    PUSHBUTTON      "CANCEL",IDCANCEL,196-48,12,48,12
+    LTEXT           "This is option dlg.",IDC_LABEL,0,0,196-48,12
+    EDITTEXT        "test",IDC_EDIT,0,12,196-48,12,ES_AUTOHSCROLL
+END
+
