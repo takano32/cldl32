@@ -160,6 +160,17 @@ __declspec(dllexport) int GetToolInfo(int Cnt,char *Title,char *Func,long *lPara
 		ret = RET_MENUONLY;								//戻り値（呼び出しフラグ）
 		// **************************************
 		break;
+	case 5:
+		// **************************************
+		lstrcpy(Title,"Div");		//タイトルの設定
+		lstrcpy(Func,"Div");			//関数名の設定
+		//*lParam = 0;
+		//関数に渡す数値の設定
+
+		ret = RET_MENUONLY;
+		//戻り値（呼び出しフラグ）
+		// **************************************
+		break;
 
 	}
 	return ret;

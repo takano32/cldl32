@@ -1,5 +1,5 @@
 #include "cldl32.h"
-__declspec(dllexport) int Span(HWND hWnd,struct TPCLIPINFO *ClipInfo,int Flag,int cnt)
+__declspec(dllexport) int Div(HWND hWnd,struct TPCLIPINFO *ClipInfo,int Flag,int cnt)
 {
 
 	HGLOBAL hRetMem;
@@ -54,7 +54,7 @@ __declspec(dllexport) int Span(HWND hWnd,struct TPCLIPINFO *ClipInfo,int Flag,in
 		strcat(options,buffer);
 	}
 
-	wsprintf(ret,"<span%s>%s</span>",options,buf);
+	wsprintf(ret,"<div%s>%s</div>",options,buf);
 
 	//処理したバッファのサイズを取得する。
 	hSize = lstrlen(ret) + 1;
