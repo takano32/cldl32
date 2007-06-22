@@ -1,4 +1,4 @@
-OBJ=main.o Font.o Comment.o Link.o Div.o Span.o Footnote.o
+OBJ=main.o Font.o Comment.o Link.o Div.o Span.o Footnote.o Open.o
 cldl32	:	cldl32.res ${OBJ}
 	${CC} -shared -mwindows -mno-cygwin -o cldl32.dll ${OBJ} cldl32.res -limm32
 
